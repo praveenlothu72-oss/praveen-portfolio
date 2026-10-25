@@ -12,10 +12,10 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    "Flutter Developer",
-    "Firebase Developer",
-    "AI Enthusiast",
-    "Mobile App Developer",
+    "AI Agents Developer",
+    "FastAPI Backend Engineer",
+    "RAG & LLM Specialist",
+    "Prompt Engineer",
   ];
 
   useEffect(() => {
@@ -101,11 +101,11 @@ export default function Hero() {
               className="text-slate-300 text-sm md:text-base leading-relaxed mb-8 max-w-lg"
             >
               Motivated and detail-oriented Computer Science student specializing in
-              <span className="text-white font-semibold"> Flutter</span>,
-              <span className="text-white font-semibold"> Firebase</span>,
-              <span className="text-white font-semibold"> Artificial Intelligence</span>, and
-              <span className="text-white font-semibold"> Cloud Computing</span>. Passionate about building
-              beautiful mobile applications and AI-powered solutions.
+              <span className="text-white font-semibold"> AI Agents Building</span>,
+              <span className="text-white font-semibold"> Claude MCPs</span>,
+              <span className="text-white font-semibold"> Custom RAG Pipelines</span>, and
+              <span className="text-white font-semibold"> FastAPI Backend</span>. Passionate about engineering
+              autonomous intelligence and high-performance systems.
             </motion.p>
 
             <motion.div
@@ -209,7 +209,7 @@ export default function Hero() {
                 <Brain className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-[15px] font-bold leading-none text-white">Flutter & AI</p>
+                <p className="text-[15px] font-bold leading-none text-white">AI & Backend</p>
                 <p className="text-[10px] text-slate-400">Specialization</p>
               </div>
             </motion.div>

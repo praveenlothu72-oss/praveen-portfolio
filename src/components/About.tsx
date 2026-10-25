@@ -58,7 +58,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-slate-400 text-sm md:text-base max-w-xl mx-auto"
           >
-            An academic path shaped by passion for mobile development, cloud solutions, and intelligence systems.
+            An academic path shaped by passion for AI agent architectures, backend engineering, and intelligent systems.
           </motion.p>
         </div>
 

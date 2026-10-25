@@ -54,8 +54,8 @@ export default function Contact() {
     {
       icon: GithubIcon,
       label: "GitHub",
-      value: "github.com/praveenlothu72-osstext",
-      href: "https://github.com/praveenlothu72-osstext",
+      value: "github.com/praveenlothu72-oss",
+      href: "https://github.com/praveenlothu72-oss",
       color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
     },
   ];

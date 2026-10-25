@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Durga Praveen Lotu | Flutter Developer & AI Enthusiast",
-  description: "Portfolio of Durga Praveen Lotu - Computer Science Undergraduate student specializing in Flutter, Firebase, Artificial Intelligence, and Cloud Computing. Detail-oriented developer building beautiful mobile and AI applications.",
-  keywords: ["Durga Praveen Lotu", "Praveen Lotu", "Flutter Developer", "Firebase", "AI Enthusiast", "Mobile Developer", "GIET Engineering College", "Nuzvid Polytechnic", "Portfolio"],
+  title: "Durga Praveen Lotu | AI Engineer & Backend Developer",
+  description: "Portfolio of Durga Praveen Lotu - Computer Science student specializing in AI Agents Building, Claude MCPs, Custom RAG Systems, Prompt Engineering, and FastAPI Backend Architecture.",
+  keywords: ["Durga Praveen Lotu", "Praveen Lotu", "AI Engineer", "AI Agents", "Claude MCP", "FastAPI", "RAG", "Prompt Engineering", "Portfolio"],
   authors: [{ name: "Durga Praveen Lotu" }],
 };
 

@@ -68,7 +68,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Durga Praveen Lotu. All rights reserved.</p>
           <p className="flex gap-6">
             <a
-              href="https://github.com/praveenlothu72-osstext"
+              href="https://github.com/praveenlothu72-oss"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-electric transition-colors"

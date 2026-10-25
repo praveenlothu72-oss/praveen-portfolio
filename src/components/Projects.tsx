@@ -7,40 +7,30 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
-      title: "Groq AI Chatbot",
-      description: "An ultra-fast conversational AI assistant built using Groq Cloud's LPU inference engine, offering near-instantaneous responses and intelligent contextual chat.",
-      image: "/projects/groq-chatbot.png",
-      technologies: ["Flask", "Python", "Groq API", "Tailwind CSS"],
-      github: "https://github.com/praveenlothu72-osstext/ai-chatbot-flask-groq",
-      live: "https://ai-chatbot-flask-groq.onrender.com/",
-      glowColor: "shadow-emerald-500/10",
+      title: "ChefAI – Intelligent Cooking Assistant",
+      tagline: "Smart Culinary Assistant & Dynamic Recipe Engine",
+      description:
+        "An AI-powered personal kitchen assistant that dynamically formulates gourmet recipes from available pantry ingredients, strict dietary preferences, and target meal types. Implements safety guardrails, smart substitutions, and prompt-engineered LLM reasoning via OpenRouter.",
+      image: "/projects/chefai.jpg",
+      badge: "AI Culinary Assistant",
+      technologies: ["Python", "Streamlit", "OpenRouter API", "Prompt Engineering", "LLM Reasoning"],
+      github: "https://github.com/praveenlothu72-oss/chefai-cooking-assistant",
+      live: "https://github.com/praveenlothu72-oss/chefai-cooking-assistant",
+      glowColor: "shadow-emerald-500/10 hover:border-emerald-500/30",
+      accentGradient: "from-emerald-500 to-teal-400",
     },
     {
-      title: "AI Medical Chatbot",
-      description: "AI-powered healthcare chatbot capable of answering medical queries, offering symptom checks, and providing medical information.",
-      image: "/projects/chatbot.png",
-      technologies: ["Flutter", "Firebase", "AI API"],
-      github: "https://github.com/praveenlothu72-osstext",
-      live: "#",
-      glowColor: "shadow-blue-500/10",
-    },
-    {
-      title: "Movie Browsing App",
-      description: "Animated movie browsing platform showcasing trending films, movie details, cast information, and IMDb ratings with smooth transitions.",
-      image: "/projects/movie.png",
-      technologies: ["Flutter", "Firebase"],
-      github: "https://github.com/praveenlothu72-osstext",
-      live: "#",
-      glowColor: "shadow-violet-500/10",
-    },
-    {
-      title: "Zomato Clone",
-      description: "Food ordering application featuring full authentication, restaurant listings, category searches, cart management, and order tracking.",
-      image: "/projects/zomato.png",
-      technologies: ["Flutter", "Firebase Realtime Database"],
-      github: "https://github.com/praveenlothu72-osstext",
-      live: "#",
-      glowColor: "shadow-rose-500/10",
+      title: "Custom RAG Engine from Scratch",
+      tagline: "Document Ingestion & Semantic Retrieval Pipeline",
+      description:
+        "An end-to-end Retrieval-Augmented Generation (RAG) system engineered from scratch without high-level black-box wrappers. Features PDF parsing, recursive chunking, HuggingFace sentence embeddings (all-MiniLM-L6-v2), ChromaDB vector persistence, and local LLM inference using Ollama (Qwen2.5).",
+      image: "/projects/rag-pipeline.jpg",
+      badge: "GenAI & RAG Pipeline",
+      technologies: ["Python", "LangChain", "ChromaDB", "HuggingFace", "Ollama (Qwen2.5)", "Vector Search"],
+      github: "https://github.com/praveenlothu72-oss/rag_application",
+      live: "https://github.com/praveenlothu72-oss/rag_application",
+      glowColor: "shadow-indigo-500/10 hover:border-indigo-500/30",
+      accentGradient: "from-indigo-500 to-violet-400",
     },
   ];
 
@@ -77,12 +67,12 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-slate-400 text-sm md:text-base max-w-xl mx-auto"
           >
-            A curated selection of my work demonstrating expertise in cross-platform mobile development, cloud databases, and AI integration.
+            A curated selection of my work demonstrating expertise in autonomous AI systems, custom RAG pipelines, and intelligent assistants.
           </motion.p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -90,35 +80,48 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className={`group glass-card rounded-3xl border border-white/10 overflow-hidden flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-white/20 ${project.glowColor}`}
+              className={`group glass-card rounded-3xl border border-white/10 overflow-hidden flex flex-col justify-between shadow-2xl transition-all duration-300 ${project.glowColor}`}
             >
               {/* Entire upper part is a link to the project site */}
               <a
-                href={project.live !== "#" ? project.live : project.github}
+                href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex-1 flex flex-col"
               >
                 {/* Project Image Container */}
-                <div className="relative h-56 w-full overflow-hidden bg-slate-950/60 border-b border-white/10">
+                <div className="relative h-64 md:h-72 w-full overflow-hidden bg-slate-950/60 border-b border-white/10">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out select-none"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
+
+                  {/* Top Badge */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-950/70 backdrop-blur-md border border-white/15 text-white shadow-lg">
+                      {project.badge}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-electric transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white mb-1.5 group-hover:text-electric transition-colors duration-300">
                       {project.title}
                     </h3>
+
+                    {/* Tagline */}
+                    <p className="text-xs font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-electric" />
+                      {project.tagline}
+                    </p>
 
                     {/* Description */}
                     <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
@@ -132,7 +135,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIdx) => (
                         <span
                           key={techIdx}
-                          className="px-2.5 py-1 rounded-lg text-[10px] font-semibold bg-white/5 border border-white/10 text-slate-300"
+                          className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-white/5 border border-white/10 text-slate-300"
                         >
                           {tech}
                         </span>
@@ -142,28 +145,28 @@ export default function Projects() {
                 </div>
               </a>
 
-              {/* Action Buttons (outside link tag for accessibility) */}
-              <div className="px-6 pb-6">
+              {/* Action Buttons */}
+              <div className="px-6 md:px-8 pb-6 md:pb-8">
                 <div className="flex items-center gap-3 border-t border-white/5 pt-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-xs py-2 rounded-xl transition-all duration-300 hover:scale-[1.02]"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-xs md:text-sm py-2.5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
                   >
-                    <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                     </svg>
                     GitHub
                   </a>
                   <a
-                    href={project.live}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo to-violet text-white font-semibold text-xs py-2 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-indigo/20 hover:scale-[1.02]"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo to-violet text-white font-semibold text-xs md:text-sm py-2.5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-indigo/20 hover:scale-[1.02]"
                   >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    Live Demo
+                    <ExternalLink className="h-4 w-4" />
+                    Explore Project
                   </a>
                 </div>
               </div>

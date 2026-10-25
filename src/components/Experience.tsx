@@ -58,7 +58,7 @@ export default function Experience() {
       startFrom: 0,
       suffix: "+",
       label: "Projects Built",
-      description: "Flutter, AI, & Database",
+      description: "AI Systems, RAG & FastAPI",
       color: "from-blue-500/20 to-indigo-500/20 text-blue-400",
     },
     {
@@ -66,7 +66,7 @@ export default function Experience() {
       startFrom: 0,
       suffix: "+",
       label: "Hours Learning AI",
-      description: "ML Basics & API Integration",
+      description: "AI Agents, RAG & MCPs",
       color: "from-violet-500/20 to-purple-500/20 text-violet-400",
     },
     {

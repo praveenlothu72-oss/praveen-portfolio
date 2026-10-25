@@ -1,52 +1,35 @@
 "use client";
 
-import { Brain, Cloud, Globe, Smartphone, Terminal } from "lucide-react";
+import { Bot, Brain, Server, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Mobile Development",
-      icon: Smartphone,
-      color: "text-blue-400 bg-blue-500/10 border-blue-500/20",
-      skills: [
-        { name: "Flutter", level: 95 },
-        { name: "Firebase", level: 90 },
-      ],
-    },
-    {
-      title: "Programming",
-      icon: Terminal,
-      color: "text-amber-400 bg-amber-500/10 border-amber-500/20",
-      skills: [
-        { name: "Python", level: 85 },
-        { name: "SQL", level: 80 },
-      ],
-    },
-    {
-      title: "Web Technologies",
-      icon: Globe,
-      color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-      skills: [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
-      ],
-    },
-    {
-      title: "Cloud & Infrastructure",
-      icon: Cloud,
-      color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
-      skills: [
-        { name: "Cloud Computing", level: 75 },
-      ],
-    },
-    {
-      title: "Artificial Intelligence",
-      icon: Brain,
+      title: "AI Agents & Autonomous Systems",
+      icon: Bot,
       color: "text-violet-400 bg-violet-500/10 border-violet-500/20",
       skills: [
-        { name: "Artificial Intelligence", level: 80 },
-        { name: "Machine Learning Basics", level: 75 },
+        { name: "AI Agents Building", level: 95 },
+        { name: "Claude MCPs", level: 90 },
+      ],
+    },
+    {
+      title: "GenAI & Prompt Engineering",
+      icon: Sparkles,
+      color: "text-blue-400 bg-blue-500/10 border-blue-500/20",
+      skills: [
+        { name: "Prompt Engineering", level: 95 },
+        { name: "Artificial Intelligence", level: 85 },
+      ],
+    },
+    {
+      title: "Backend Engineering",
+      icon: Server,
+      color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+      skills: [
+        { name: "FastAPI as Backend", level: 92 },
+        { name: "Python", level: 90 },
       ],
     },
   ];
@@ -83,7 +66,7 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-slate-400 text-sm md:text-base max-w-xl mx-auto"
           >
-            A compilation of frameworks, languages, and core concepts I specialize in to build comprehensive digital applications.
+            A compilation of frameworks, agentic workflows, and architectures I specialize in to build autonomous AI systems and high-performance backends.
           </motion.p>
         </div>
 
